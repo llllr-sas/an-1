@@ -317,7 +317,7 @@
                 <div class="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 mb-8 md:mb-10 group">
                     <div class="absolute inset-0 bg-pink-300 rounded-full animate-pulse opacity-60 blur-xl group-hover:opacity-80 transition-opacity"></div>
                     <div class="relative w-full h-full rounded-full border-[6px] md:border-8 border-white shadow-xl overflow-hidden bg-pink-100 flex items-center justify-center transform transition-transform duration-500 md:group-hover:scale-105 md:group-hover:-rotate-3">
-                        <img src="image/1.JPG" alt="Our Couple Photo" class="w-full h-full object-cover" draggable="false">
+                        <img src="image/1.JPG" alt="Our Couple Photo" class="w-full h-full object-cover" draggable="false" onerror="this.src='https://placehold.co/400x400/ffb3c1/ffffff?text=image/1.JPG';">
                     </div>
                     <!-- Small decorative heart on frame -->
                     <div class="absolute -bottom-1 -right-1 sm:-bottom-2 sm:-right-2 text-2xl sm:text-3xl text-pink-500 heartbeat-anim bg-white/95 backdrop-blur-sm rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-lg border-2 border-pink-100">
@@ -458,7 +458,7 @@
                     </p>
                 </div>
 
-                <!-- Gallery Layout (Using real local images: image/2.JPG to image/7.JPG) -->
+                <!-- Gallery Layout (Using local image paths with proper URI encoding for spaces and brackets) -->
                 <div class="flex flex-col lg:flex-row w-full justify-center items-center gap-10 lg:gap-12 relative z-40 pb-6 md:pb-10">
                     
                     <!-- 1. Photo Booth Strip (Left) - Using image/2.JPG, image/3.JPG, image/4.JPG -->
@@ -467,18 +467,18 @@
                         <div class="absolute bottom-2 right-2 text-pink-400 text-lg md:text-xl transform rotate-12 opacity-80"><i class="fa-solid fa-heart"></i></div>
                         
                         <div class="w-full flex flex-col gap-2">
-                            <img src="image/2.JPG" alt="Photo Booth 1" class="w-full h-auto aspect-[4/3] object-cover rounded-sm border border-gray-200 shadow-sm" loading="lazy" draggable="false">
-                            <img src="image/3.JPG" alt="Photo Booth 2" class="w-full h-auto aspect-[4/3] object-cover rounded-sm border border-gray-200 shadow-sm" loading="lazy" draggable="false">
-                            <img src="image/4.JPG" alt="Photo Booth 3" class="w-full h-auto aspect-[4/3] object-cover rounded-sm border border-gray-200 shadow-sm" loading="lazy" draggable="false">
+                            <img src="image/2.JPG" alt="Photo Booth 1" class="w-full h-auto aspect-[4/3] object-cover rounded-sm border border-gray-200 shadow-sm" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/300x250/ffb3c1/ffffff?text=image/2.JPG';">
+                            <img src="image/3.JPG" alt="Photo Booth 2" class="w-full h-auto aspect-[4/3] object-cover rounded-sm border border-gray-200 shadow-sm" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/300x250/f9a8d4/ffffff?text=image/3.JPG';">
+                            <img src="image/4.JPG" alt="Photo Booth 3" class="w-full h-auto aspect-[4/3] object-cover rounded-sm border border-gray-200 shadow-sm" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/300x250/f472b6/ffffff?text=image/4.JPG';">
                         </div>
                     </div>
 
-                    <!-- 2. Single Polaroid (Middle) - Using image/5 (3).JPG -->
+                    <!-- 2. Single Polaroid (Middle) - Using URI encoded path image/5%20(3).JPG -->
                     <div class="stagger-item stagger-3 scrapbook-card transform rotate-[2deg] active:scale-95 transition-all duration-400 w-[160px] sm:w-[190px] md:w-[220px] cursor-pointer">
                         <div class="washi-tape washi-tape-yellow"></div>
                         <div class="absolute top-2 right-2 text-yellow-400 text-base md:text-lg transform rotate-45 opacity-80 z-10"><i class="fa-solid fa-star"></i></div>
                         
-                        <img src="image/5 (3).JPG" alt="Polaroid" class="w-full aspect-square object-cover rounded-sm border border-gray-200 shadow-inner" loading="lazy" draggable="false">
+                        <img src="image/5%20(3).JPG" alt="Polaroid" class="w-full aspect-square object-cover rounded-sm border border-gray-200 shadow-inner" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/400x400/fbcfe8/be185d?text=image/5+(3).JPG';">
                     </div>
 
                     <!-- 3. Stacked Interactive Photos (Right) - Using image/6.JPG (back) and image/7.JPG (front) -->
@@ -491,13 +491,13 @@
                         <!-- Stack รูปที่ 1 (หลัง) -->
                         <div class="photo-1 stacked-photo absolute inset-0 scrapbook-card transform rotate-[-5deg] flex flex-col justify-between shadow-md">
                             <div class="washi-tape washi-tape-blue"></div>
-                            <img src="image/6.JPG" alt="Stack Back" class="w-full h-full object-cover rounded-sm border border-gray-200" loading="lazy" draggable="false">
+                            <img src="image/6.JPG" alt="Stack Back" class="w-full h-full object-cover rounded-sm border border-gray-200" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/400x400/fdf2f8/db2777?text=image/6.JPG';">
                         </div>
 
                         <!-- Stack รูปที่ 2 (หน้า) -->
                         <div class="photo-2 stacked-photo absolute inset-0 scrapbook-card transform rotate-[3deg] group-hover:rotate-[5deg] flex flex-col justify-between border border-gray-100 shadow-xl z-20">
                             <div class="washi-tape washi-tape-yellow"></div>
-                            <img src="image/7.JPG" alt="Stack Front" class="w-full h-full object-cover rounded-sm border border-gray-200" loading="lazy" draggable="false">
+                            <img src="image/7.JPG" alt="Stack Front" class="w-full h-full object-cover rounded-sm border border-gray-200" loading="lazy" draggable="false" onerror="this.src='https://placehold.co/400x400/fce7f3/be185d?text=image/7.JPG';">
                         </div>
                     </div>
 
